@@ -30,12 +30,17 @@ public class CardCollectionManager {
                 String line = scanner.nextLine();
                 String[] parts = line.split("\\|");
                 if (parts.length == 2) {
-                    allCards.put(parts[0].trim(), parts[1].trim());
+                    foo(parts[0].trim(), parts[1].trim(), allCards );
+                    // allCards.put(parts[0].trim(), parts[1].trim());
                 }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void foo(String part1, String part2, Map<String, String> allCards){
+        allCards.put(part1, part2);
     }
 
     /**
